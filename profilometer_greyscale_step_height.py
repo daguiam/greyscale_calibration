@@ -1,5 +1,5 @@
 ###########
-version = 20181203
+version = 20181204
 
 ### Analysis of profilometer data of Gray Scale lithography tests
 
