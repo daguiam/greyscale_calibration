@@ -117,8 +117,9 @@ if __name__ == "__main__":
     #### FOR complete 128 depths measurement
     max_depths = 128
     pitch = 100
+    skip_beginning = 20
 
-    split_sections = np.arange(max_depths)*pitch+pitch
+    split_sections = np.arange(max_depths)*pitch+skip_beginning
     surface_percentile = 90
     bottom_percentile = 10
     greyscales = np.zeros(max_depths)
@@ -132,10 +133,11 @@ if __name__ == "__main__":
     print("""
     Greyscale values: %d
     Pitch: %0.3f um
+    Skipped first: %0.3f um
     Surface percentile: %0.3f
     Bottom percentile: %0.3f
     Plot [ymin, ymax]: [%d, %d] um
-    """%(len(greyscales), pitch, surface_percentile, bottom_percentile,
+    """%(len(greyscales), pitch, skip_beginning, surface_percentile, bottom_percentile,
     max_depth, max_height))
 
     for file_i,file in enumerate(files):
