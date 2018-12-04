@@ -1,3 +1,6 @@
+###########
+version = 20181203
+
 ### Analysis of profilometer data of Gray Scale lithography tests
 
 import numpy as np
@@ -93,9 +96,9 @@ if __name__ == "__main__":
     root.withdraw()
 
     print("""Calculate Greyscale curve from step height calibration wafer
-
+            Version: %d
         Select an profilometer file with full wafer ascii data
-    """)
+    """%(version))
 
     # Opens windows dialog to select file
 
