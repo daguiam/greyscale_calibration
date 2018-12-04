@@ -269,7 +269,7 @@ if __name__ == "__main__":
 
 
     greyscale_calibration = np.array([gs_levels, gs_heights]).T
-    gs_filename = 'greyscale_calibration.txt'
+    gs_filename = 'greyscale_calibration.csv'
     filename = os.path.join(root_dir, gs_filename)
     header = 'Grayscale level, step height [um]'
     np.savetxt(filename, greyscale_calibration, delimiter=',', fmt='%d,%0.4f', header=header) 
